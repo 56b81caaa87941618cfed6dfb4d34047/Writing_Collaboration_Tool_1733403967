@@ -301,5 +301,15 @@
         "source": "smart_contract_assistant",
         "content": "The contract at 0x8e8bF8E610F021A945b0bd58A14969bdd2FA27bE was deployed on the Holesky testnet. You can't interact with it on Sepolia. Would you like me to generate a frontend component for the Holesky testnet instead?",
         "metadata": {}
+    },
+    {
+        "id": "96b11d6a-fbb1-41cc-b4b4-a6e6548d9b4e",
+        "timestamp": "2024-12-05T13:09:53.519523Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "in ploygon",
+        "metadata": {
+            "component_id": "Header1733403970"
+        }
     }
 ]
