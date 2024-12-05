@@ -174,5 +174,15 @@
         "source": "base_assistant",
         "content": "Unfortunately, I can't directly deploy smart contracts. You will need to deploy the Smart contract you generated through an Ethereum development environment like Remix or Hardhat. If you need any further assistance with this, feel free to ask!",
         "metadata": {}
+    },
+    {
+        "id": "0971b17c-f6c2-4bc8-8a4f-4ade676f835b",
+        "timestamp": "2024-12-05T13:08:33.541517Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "deploy the src/contracts/StakingContract",
+        "metadata": {
+            "component_id": "Header1733403970"
+        }
     }
 ]
