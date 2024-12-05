@@ -156,5 +156,15 @@
         "source": "base_assistant",
         "content": "The title in the header has been changed to \"Hi\". What would you like to do next?",
         "metadata": {}
+    },
+    {
+        "id": "091b36af-d84d-4431-be5a-43462160c503",
+        "timestamp": "2024-12-05T13:08:10.087347Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "now deploy the smart contract on holestky",
+        "metadata": {
+            "component_id": "Header1733403970"
+        }
     }
 ]
