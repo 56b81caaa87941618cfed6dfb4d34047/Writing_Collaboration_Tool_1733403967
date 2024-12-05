@@ -449,5 +449,13 @@
         "metadata": {
             "tool_call_id": "call_HxMZbhVWYWnf3xqAjSjJpGSP"
         }
+    },
+    {
+        "id": "b72876d0-5955-4cc4-96af-24cd450a8e2b",
+        "timestamp": "2024-12-05T13:19:06.771564Z",
+        "role": "assistant",
+        "source": "smart_contract_assistant",
+        "content": "The StakingContract has been successfully deployed to the Sepolia testnet at address 0xE700a435e00d00391d466f79AB711754F5294a2e. A frontend component has also been generated to interact with it. What would you like to do next?",
+        "metadata": {}
     }
 ]
