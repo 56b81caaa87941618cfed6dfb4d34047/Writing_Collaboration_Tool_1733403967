@@ -416,5 +416,20 @@
         "metadata": {
             "component_id": "Header1733403970"
         }
+    },
+    {
+        "id": "fb03821b-142b-44bc-8299-7ce7c0fcd03a",
+        "timestamp": "2024-12-05T13:18:32.679636Z",
+        "role": "tool_call",
+        "source": "smart_contract_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_HxMZbhVWYWnf3xqAjSjJpGSP",
+            "function": {
+                "arguments": "{\"contract_id\":\"StakingContract\",\"frontend_description\":\"Frontend component to interact with the Staking Contract.\",\"acknowledgement_message\":\"Okay, I'm deploying the contract...\",\"chain_id\":\"SEPOLIA\"}",
+                "name": "DeployAndGenerateFrontend"
+            },
+            "type": "function"
+        }
     }
 ]
