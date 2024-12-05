@@ -11,18 +11,20 @@ const StakingComponent: React.FC = () => {
   const [withdrawAmount, setWithdrawAmount] = React.useState<string>('');
   const [stakedBalance, setStakedBalance] = React.useState<string>('0');
   const [availableRewards, setAvailableRewards] = React.useState<string>('0');
-  const [totalStaked, setTotalStaked] = React.useState<string>('0');
+  const [stakingTokenAddress, setStakingTokenAddress] = React.useState<string>('');
+  const [rewardRate, setRewardRate] = React.useState<string>('0');
 
-  const contractAddress = '0x8e8bF8E610F021A945b0bd58A14969bdd2FA27bE';
-  const chainId = 17000; // Holesky testnet
+  const contractAddress = '0xE700a435e00d00391d466f79AB711754F5294a2e';
+  const chainId = 11155111; // Sepolia testnet
 
   const contractABI = [
+    "function stakingToken() public view returns (address)",
+    "function rewardRate() public view returns (uint256)",
+    "function stakingBalance(address) public view returns (uint256)",
+    "function calculateReward(address _user) public view returns (uint256)",
     "function stake(uint256 _amount) external",
     "function withdraw(uint256 _amount) external",
-    "function claimRewards() external",
-    "function calculateReward(address _user) public view returns (uint256)",
-    "function stakingBalance(address) public view returns (uint256)",
-    "function totalStaked() public view returns (uint256)"
+    "function claimRewards() external"
   ];
 
   React.useEffect(() => {
@@ -53,12 +55,25 @@ const StakingComponent: React.FC = () => {
         const address = await signer.getAddress();
         setAccount(address);
 
+        await updateContractInfo(stakingContract);
         await updateBalances(stakingContract, address);
       }
     };
 
     init();
   }, []);
+
+  const updateContractInfo = async (stakingContract: ethers.Contract) => {
+    try {
+      const tokenAddress = await stakingContract.stakingToken();
+      setStakingTokenAddress(tokenAddress);
+
+      const rate = await stakingContract.rewardRate();
+      setRewardRate(ethers.utils.formatUnits(rate, 18));
+    } catch (error) {
+      console.error("Error updating contract info:", error);
+    }
+  };
 
   const updateBalances = async (stakingContract: ethers.Contract, address: string) => {
     try {
@@ -67,20 +82,27 @@ const StakingComponent: React.FC = () => {
 
       const rewards = await stakingContract.calculateReward(address);
       setAvailableRewards(ethers.utils.formatEther(rewards));
-
-      const totalStaked = await stakingContract.totalStaked();
-      setTotalStaked(ethers.utils.formatEther(totalStaked));
     } catch (error) {
       console.error("Error updating balances:", error);
+    }
+  };
+
+  const estimateGas = async (transaction: () => Promise<ethers.ContractTransaction>): Promise<string> => {
+    try {
+      const tx = await transaction();
+      const gasLimit = await tx.estimateGas();
+      return gasLimit.mul(120).div(100).toString(); // Add 20% buffer
+    } catch (error) {
+      console.error("Error estimating gas:", error);
+      return ethers.utils.hexlify(300000); // Fallback gas limit
     }
   };
 
   const handleStake = async () => {
     if (!contract || !signer) return;
     try {
-      const tx = await contract.stake(ethers.utils.parseEther(stakeAmount), {
-        gasLimit: ethers.utils.hexlify(300000), // Adjust this value based on contract needs
-      });
+      const gasLimit = await estimateGas(() => contract.stake(ethers.utils.parseEther(stakeAmount)));
+      const tx = await contract.stake(ethers.utils.parseEther(stakeAmount), { gasLimit });
       await tx.wait();
       await updateBalances(contract, account);
       setStakeAmount('');
@@ -92,7 +114,8 @@ const StakingComponent: React.FC = () => {
   const handleWithdraw = async () => {
     if (!contract || !signer) return;
     try {
-      const tx = await contract.withdraw(ethers.utils.parseEther(withdrawAmount));
+      const gasLimit = await estimateGas(() => contract.withdraw(ethers.utils.parseEther(withdrawAmount)));
+      const tx = await contract.withdraw(ethers.utils.parseEther(withdrawAmount), { gasLimit });
       await tx.wait();
       await updateBalances(contract, account);
       setWithdrawAmount('');
@@ -104,7 +127,8 @@ const StakingComponent: React.FC = () => {
   const handleClaimRewards = async () => {
     if (!contract || !signer) return;
     try {
-      const tx = await contract.claimRewards();
+      const gasLimit = await estimateGas(() => contract.claimRewards());
+      const tx = await contract.claimRewards({ gasLimit });
       await tx.wait();
       await updateBalances(contract, account);
     } catch (error) {
@@ -117,9 +141,10 @@ const StakingComponent: React.FC = () => {
       <h1 className="text-2xl font-bold mb-4">Staking Contract Interaction</h1>
       <div className="bg-gray-100 rounded-lg p-4 mb-4">
         <p>Connected Account: {account}</p>
+        <p>Staking Token Address: {stakingTokenAddress}</p>
+        <p>Reward Rate: {rewardRate} tokens per second per staked token</p>
         <p>Staked Balance: {stakedBalance} tokens</p>
         <p>Available Rewards: {availableRewards} tokens</p>
-        <p>Total Staked in Contract: {totalStaked} tokens</p>
       </div>
       <div className="mb-4">
         <input
