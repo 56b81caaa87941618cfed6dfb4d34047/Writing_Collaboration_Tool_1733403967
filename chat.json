@@ -115,5 +115,20 @@
         "metadata": {
             "tool_call_id": "call_zgfvsFf9Th4fAw7dpEKEpFrf"
         }
+    },
+    {
+        "id": "19759084-9e0f-49e0-a527-8ae01b5b4a5b",
+        "timestamp": "2024-12-05T13:07:58.034762Z",
+        "role": "tool_call",
+        "source": "base_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_vg7J4XCSEPUrjNATAqLz9IcE",
+            "function": {
+                "arguments": "{\"component_id\":\"Header1733403970\",\"change_description\":\"Change the title to 'Hi'\",\"acknowledgement_message\":\"Changing the title in the header to 'Hi'.\"}",
+                "name": "EditFrontendComponent"
+            },
+            "type": "function"
+        }
     }
 ]
