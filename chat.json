@@ -337,5 +337,15 @@
         "source": "smart_contract_assistant",
         "content": "Currently, the contract is only deployed on the Holesky testnet. It needs to be redeployed on the Polygon network first. Please let me know if you would like to proceed with the redeployment on Polygon.",
         "metadata": {}
+    },
+    {
+        "id": "1ed8c340-cdf1-4aeb-9e13-6f9430ea06fb",
+        "timestamp": "2024-12-05T13:10:22.470654Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "deploy it on polygon",
+        "metadata": {
+            "component_id": "Header1733403970"
+        }
     }
 ]
