@@ -347,5 +347,13 @@
         "metadata": {
             "component_id": "Header1733403970"
         }
+    },
+    {
+        "id": "d215375b-7f97-4abe-8c3d-74baec9588bd",
+        "timestamp": "2024-12-05T13:10:25.371930Z",
+        "role": "assistant",
+        "source": "smart_contract_assistant",
+        "content": "Currently, I can only deploy to the Holesky and Sepolia testnets. Unfortunately, Polygon deployment is not supported at the moment. Let me know if you would like to deploy it on one of the available testnets.",
+        "metadata": {}
     }
 ]
