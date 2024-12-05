@@ -90,5 +90,20 @@
         "metadata": {
             "component_id": "Header1733403970"
         }
+    },
+    {
+        "id": "aa445153-39ab-4219-bba3-7ef676b2ac64",
+        "timestamp": "2024-12-05T13:07:56.158302Z",
+        "role": "tool_call",
+        "source": "smart_contract_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_zgfvsFf9Th4fAw7dpEKEpFrf",
+            "function": {
+                "arguments": "{}",
+                "name": "TransferToBaseAssistant"
+            },
+            "type": "function"
+        }
     }
 ]
