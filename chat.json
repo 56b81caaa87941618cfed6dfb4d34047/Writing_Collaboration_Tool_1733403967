@@ -209,5 +209,20 @@
         "metadata": {
             "tool_call_id": "call_zRxDOO3QDGzpc8uQKuNg5pLB"
         }
+    },
+    {
+        "id": "c2650fb3-51cf-43dd-aaa7-5cea55a366e4",
+        "timestamp": "2024-12-05T13:08:37.679417Z",
+        "role": "tool_call",
+        "source": "smart_contract_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_rQwHF02J4ZKhtKtnwAGDURko",
+            "function": {
+                "arguments": "{\"contract_id\":\"StakingContract\",\"frontend_description\":\"Frontend component to interact with the Staking Contract.\",\"acknowledgement_message\":\"Okay, I'm deploying the contract...\",\"chain_id\":\"HOLESKY\"}",
+                "name": "DeployAndGenerateFrontend"
+            },
+            "type": "function"
+        }
     }
 ]
