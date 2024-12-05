@@ -184,5 +184,20 @@
         "metadata": {
             "component_id": "Header1733403970"
         }
+    },
+    {
+        "id": "6419c678-8487-4107-99e3-a2b25f88cfa5",
+        "timestamp": "2024-12-05T13:08:35.866534Z",
+        "role": "tool_call",
+        "source": "base_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_zRxDOO3QDGzpc8uQKuNg5pLB",
+            "function": {
+                "arguments": "{}",
+                "name": "TransferToSmartContractAssistant"
+            },
+            "type": "function"
+        }
     }
 ]
