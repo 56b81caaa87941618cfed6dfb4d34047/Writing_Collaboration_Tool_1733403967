@@ -1,0 +1,23 @@
+{
+    "name": "example",
+    "prefix": "%#PLACEHOLDER",
+    "placeholderMappings": {
+        "Header": [
+            "APPLICATION_NAME"
+        ],
+        "Hero": [
+            "HERO_HEADING_TEXT",
+            "HERO_SUBHEADING_TEXT"
+        ],
+        "Footer": [
+            "APPLICATION_NAME",
+            "FOOTER_TEXT"
+        ]
+    },
+    "placeholders": {
+        "APPLICATION_NAME": "Papyrus",
+        "HERO_HEADING_TEXT": "Revolutionize Your Writing Experience",
+        "HERO_SUBHEADING_TEXT": "Seamlessly capture, organize, and share your thoughts with our intuitive digital paper app",
+        "FOOTER_TEXT": "\u00a9 2023 Papyrus. Write freely, anytime, anywhere."
+    }
+}
