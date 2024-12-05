@@ -457,5 +457,15 @@
         "source": "smart_contract_assistant",
         "content": "The StakingContract has been successfully deployed to the Sepolia testnet at address 0xE700a435e00d00391d466f79AB711754F5294a2e. A frontend component has also been generated to interact with it. What would you like to do next?",
         "metadata": {}
+    },
+    {
+        "id": "afc37412-68ee-4d32-a8df-f0b787a80883",
+        "timestamp": "2024-12-05T13:24:27.072834Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "generate a frontend for it, make sure there is enough gas for the transactions",
+        "metadata": {
+            "component_id": "Header1733403970"
+        }
     }
 ]
