@@ -78,7 +78,9 @@ const StakingComponent: React.FC = () => {
   const handleStake = async () => {
     if (!contract || !signer) return;
     try {
-      const tx = await contract.stake(ethers.utils.parseEther(stakeAmount));
+      const tx = await contract.stake(ethers.utils.parseEther(stakeAmount), {
+        gasLimit: ethers.utils.hexlify(300000), // Adjust this value based on contract needs
+      });
       await tx.wait();
       await updateBalances(contract, account);
       setStakeAmount('');
