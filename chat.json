@@ -406,5 +406,15 @@
         "source": "smart_contract_assistant",
         "content": "The frontend component to interact with the StakingContract on the Holesky testnet has been successfully generated. Is there anything else you would like to do?",
         "metadata": {}
+    },
+    {
+        "id": "f5b47194-682b-48b1-b4df-4f87ed7cd070",
+        "timestamp": "2024-12-05T13:18:05.924858Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "now deploy the contract on sepolia",
+        "metadata": {
+            "component_id": "Header1733403970"
+        }
     }
 ]
