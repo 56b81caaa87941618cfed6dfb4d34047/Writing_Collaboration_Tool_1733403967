@@ -148,5 +148,13 @@
         "metadata": {
             "tool_call_id": "call_vg7J4XCSEPUrjNATAqLz9IcE"
         }
+    },
+    {
+        "id": "db45c556-5190-491f-8fdd-060c616ac5ed",
+        "timestamp": "2024-12-05T13:08:03.842799Z",
+        "role": "assistant",
+        "source": "base_assistant",
+        "content": "The title in the header has been changed to \"Hi\". What would you like to do next?",
+        "metadata": {}
     }
 ]
