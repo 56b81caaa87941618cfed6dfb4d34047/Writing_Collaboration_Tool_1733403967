@@ -319,5 +319,23 @@
         "source": "smart_contract_assistant",
         "content": "Currently, I can only generate frontend interactions for smart contracts on Ethereum, Holesky, Sepolia, Polygon, and zkSync Era chains. If you'd like to interact with the smart contract on Polygon, please redeploy it to the Polygon testnet first. ",
         "metadata": {}
+    },
+    {
+        "id": "d0e08797-2e44-41ac-807b-6cb1549d127d",
+        "timestamp": "2024-12-05T13:10:04.305349Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "Polygon",
+        "metadata": {
+            "component_id": "Header1733403970"
+        }
+    },
+    {
+        "id": "798b674c-8623-4460-ba28-36e4debf9272",
+        "timestamp": "2024-12-05T13:10:06.594766Z",
+        "role": "assistant",
+        "source": "smart_contract_assistant",
+        "content": "Currently, the contract is only deployed on the Holesky testnet. It needs to be redeployed on the Polygon network first. Please let me know if you would like to proceed with the redeployment on Polygon.",
+        "metadata": {}
     }
 ]
