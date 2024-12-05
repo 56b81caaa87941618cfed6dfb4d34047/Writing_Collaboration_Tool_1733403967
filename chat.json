@@ -80,5 +80,15 @@
         "source": "smart_contract_assistant",
         "content": "The staking smart contract has been generated and compiled successfully. Would you like to deploy it to the Holesky or Sepolia testnet?",
         "metadata": {}
+    },
+    {
+        "id": "5ee3cda2-18fd-4507-8375-e84275e94da4",
+        "timestamp": "2024-12-05T13:07:51.288762Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "change the title to \"Hi\" on the header",
+        "metadata": {
+            "component_id": "Header1733403970"
+        }
     }
 ]
