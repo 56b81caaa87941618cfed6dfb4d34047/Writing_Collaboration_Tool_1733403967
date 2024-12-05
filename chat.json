@@ -329,5 +329,13 @@
         "metadata": {
             "component_id": "Header1733403970"
         }
+    },
+    {
+        "id": "798b674c-8623-4460-ba28-36e4debf9272",
+        "timestamp": "2024-12-05T13:10:06.594766Z",
+        "role": "assistant",
+        "source": "smart_contract_assistant",
+        "content": "Currently, the contract is only deployed on the Holesky testnet. It needs to be redeployed on the Polygon network first. Please let me know if you would like to proceed with the redeployment on Polygon.",
+        "metadata": {}
     }
 ]
