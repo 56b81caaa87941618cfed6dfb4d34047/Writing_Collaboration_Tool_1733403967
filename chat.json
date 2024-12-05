@@ -355,5 +355,15 @@
         "source": "smart_contract_assistant",
         "content": "Currently, I can only deploy to the Holesky and Sepolia testnets. Unfortunately, Polygon deployment is not supported at the moment. Let me know if you would like to deploy it on one of the available testnets.",
         "metadata": {}
+    },
+    {
+        "id": "050d8fd8-9a5b-460e-9742-80efe0b71195",
+        "timestamp": "2024-12-05T13:10:44.459101Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "ok generate a frontend for sc address 0x8e8bF8E610F021A945b0bd58A14969bdd2FA27bE holesky",
+        "metadata": {
+            "component_id": "Header1733403970"
+        }
     }
 ]
