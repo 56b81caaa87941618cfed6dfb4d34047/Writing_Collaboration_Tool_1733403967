@@ -610,5 +610,15 @@
         "source": "smart_contract_assistant",
         "content": "The MintingContract has been successfully deployed to the Sepolia testnet at address 0x51a5a69c3722bbBd1D0f1dDE5b73361aCc162CEB. A frontend component has also been generated to interact with it. What would you like to do next?",
         "metadata": {}
+    },
+    {
+        "id": "28754dd8-e43b-4426-8fdc-c71930c900a3",
+        "timestamp": "2024-12-09T10:31:49.706273Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "deploy it in holesky",
+        "metadata": {
+            "component_id": "Hero1733403970"
+        }
     }
 ]
