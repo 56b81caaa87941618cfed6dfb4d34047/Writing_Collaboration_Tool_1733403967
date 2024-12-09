@@ -559,5 +559,15 @@
         "source": "smart_contract_assistant",
         "content": "The minting smart contract has been generated and compiled successfully. Would you like to deploy it to the Holesky or Sepolia testnet?",
         "metadata": {}
+    },
+    {
+        "id": "3cf358c6-5e4e-4805-9305-58a4da3afa75",
+        "timestamp": "2024-12-09T10:28:06.346053Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "sepolia",
+        "metadata": {
+            "component_id": "Hero1733403970"
+        }
     }
 ]
