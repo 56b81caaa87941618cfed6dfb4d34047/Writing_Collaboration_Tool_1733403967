@@ -508,5 +508,15 @@
         "source": "smart_contract_assistant",
         "content": "The frontend component to interact with the StakingContract on the Sepolia testnet has been successfully generated. It ensures enough gas for transactions. Is there anything else you need?",
         "metadata": {}
+    },
+    {
+        "id": "573c321b-af3f-4ea4-9069-99e765e62d67",
+        "timestamp": "2024-12-09T10:27:28.751184Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "generate a minting msartcontract",
+        "metadata": {
+            "component_id": "Hero1733403970"
+        }
     }
 ]
